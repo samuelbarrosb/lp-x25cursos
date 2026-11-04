@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Oficina de Impressão 3D para Iniciantes | X25 Cursos — Brasília</title>
+  <meta name="description" content="Oficina prática de 3 horas para quem nunca usou uma impressora 3D. Conheça a máquina, prepare o arquivo e imprima seu chaveiro personalizado. Mix Park Sul, Asa Sul — Brasília/DF.">
+  <meta name="theme-color" content="#161618">
+  <link rel="canonical" href="./">
+
+  <!-- Open Graph / redes sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="X25 Cursos">
+  <meta property="og:title" content="Oficina de Impressão 3D para Iniciantes | X25 Cursos">
+  <meta property="og:description" content="Da ideia ao objeto real, camada por camada. Oficina prática de 3 horas em Brasília, sem precisar de experiência.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/brand/favicon-48.png">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="preload" as="image" href="assets/img/recortes/impressora-900.webp" type="image/webp">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Oficina de Impressão 3D para Iniciantes",
+    "description": "Introdução prática ao universo da impressão 3D: tipos de impressoras e filamentos, componentes da máquina, preparação de arquivos, fatiamento e impressão de um chaveiro personalizado.",
+    "provider": { "@type": "Organization", "name": "X25 Cursos", "telephone": "+55 61 3244-2510" },
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "onsite",
+      "duration": "PT3H",
+      "location": {
+        "@type": "Place",
+        "name": "Mix Park Sul",
+        "address": { "@type": "PostalAddress", "streetAddress": "910 Sul — Asa Sul", "addressLocality": "Brasília", "addressRegion": "DF", "addressCountry": "BR" }
+      }
+    }
+  }
+  </script>
+</head>
+<body>
+
+<!-- ============ ÍCONES (sprite SVG) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-printer" viewBox="0 0 24 24"><path d="M5 20V5.5h14V20M3.5 20h17M5 9h14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.5 9v3l1.5 1.5 1.5-1.5V9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 17.5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="7.5" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="9.5" y="9.5" width="10" height="10" rx="2.5" transform="rotate(0)" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12.5 14.5h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-idea" viewBox="0 0 24 24"><path d="M9 17.5h6M10 20.5h4M12 3.5a6 6 0 0 0-3.6 10.8c.7.5 1.1 1.3 1.1 2.2h5c0-.9.4-1.7 1.1-2.2A6 6 0 0 0 12 3.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3zM4 7.5l8 4.5 8-4.5M12 12v9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 4l8.5 4.5L12 13 3.5 8.5 12 4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M3.5 12.5L12 17l8.5-4.5M3.5 16L12 20.5 20.5 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-nozzle" viewBox="0 0 24 24"><path d="M7 3.5h10v6H7zM9 9.5h6l-1.5 4h-3zM12 13.5v2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><path d="M4 20.5h16M7 18h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 3.5h8l4 4v13H6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 3.5v4h4M9 13.5l3-1.7 3 1.7v3.3l-3 1.7-3-1.7z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></symbol>
+    <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 12V5.5a1.5 1.5 0 0 1 3 0V11m0-1.5V4.5a1.5 1.5 0 0 1 3 0V11m0-4a1.5 1.5 0 0 1 3 0v6.5a7 7 0 0 1-7 7h-.5a6 6 0 0 1-5-2.7L3.8 15a1.6 1.6 0 0 1 2.6-1.8L8 15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chip" viewBox="0 0 24 24"><rect x="6.5" y="6.5" width="11" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="9.5" y="9.5" width="5" height="5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M9.5 3v3.5M14.5 3v3.5M9.5 17.5V21M14.5 17.5V21M3 9.5h3.5M3 14.5h3.5M17.5 9.5H21M17.5 14.5H21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="4" y="9" width="16" height="11.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 9h18M12 9v11.5M12 9c-1-3-4.5-4.5-5.5-2.5S9 9 12 9zm0 0c1-3 4.5-4.5 5.5-2.5S15 9 12 9z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="4" width="7" height="7" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="4" y="13" width="7" height="7" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16.5 13.5v6M13.5 16.5h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-proto" viewBox="0 0 24 24"><path d="M4 20l5-5M9 15l2-6 9-5-5 9-6 2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="14.5" cy="9.5" r="1.4" fill="currentColor"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6.2-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9.8" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7.5v5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16.3" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-chev-l" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2A9.7 9.7 0 0 0 3.7 16.9L2.4 21.6l4.8-1.3A9.7 9.7 0 1 0 12 2.2zm0 17.7a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.8.8-2.8-.2-.3A8 8 0 1 1 12 19.9zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.2-.3-.2-.5-.3z"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" data-header>
+  <div class="container header-inner">
+    <a href="#topo" class="brand" aria-label="X25 Cursos — voltar ao início">
+      <img src="assets/brand/logo-x25-branco.webp" alt="X25 Cursos" width="120" height="44">
+    </a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#experiencia">A oficina</a>
+      <a href="#para-quem">Para quem é</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#local">Local</a>
+    </nav>
+    <a href="#inscricao" class="btn btn-sm btn-primary" data-go-form>Garantir vaga</a>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- ============ 01 · HERO ============ -->
+<section class="hero theme-dark" id="topo" aria-labelledby="hero-title">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+  </div>
+
+  <div class="container hero-layout">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Oficina prática · Impressão 3D para iniciantes</p>
+      <h1 id="hero-title" class="hero-title">Da ideia ao <span class="nw">objeto real,</span> <span class="hl">camada por camada.</span></h1>
+      <p class="hero-sub">Em uma oficina prática, você conhece a impressora 3D por dentro, aprende a preparar um arquivo e imprime o seu próprio chaveiro personalizado. <strong>Não precisa de nenhuma experiência.</strong></p>
+
+      <ul class="hero-specs" aria-label="Destaques da oficina">
+        <li><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span><strong>3 horas</strong> de oficina</span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-printer"/></svg><span><strong>Uso real</strong> da impressora</span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-key"/></svg><span><strong>Chaveiro</strong> criado por você</span></li>
+      </ul>
+
+      <a href="#experiencia" class="link-arrow">Ver o que você vai aprender <svg class="ic" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hv-axis hv-axis-z"><span>Z</span></div>
+      <div class="hv-stage">
+        <div class="hv-plate"></div>
+        <img class="hv-printer" src="assets/img/recortes/impressora-900.webp" srcset="assets/img/recortes/impressora-400.webp 400w, assets/img/recortes/impressora-900.webp 900w" sizes="(min-width: 1200px) 420px, (min-width: 961px) 260px, 340px" width="900" height="860" alt="" fetchpriority="high">
+        <div class="hv-chip">
+        <span class="mono">G1 Z0.20</span>
+        <span class="hv-chip-label">Camada <b data-layer>001</b> / 240</span>
+        <span class="hv-bar"><i></i></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORMULÁRIO -->
+    <div class="hero-form-wrap" id="inscricao">
+      <form class="lead-form" data-lead-form novalidate aria-labelledby="form-title">
+        <span class="corner tl" aria-hidden="true"></span><span class="corner br" aria-hidden="true"></span>
+        <div class="form-head">
+          <p class="form-kicker mono">// inscrição</p>
+          <h2 id="form-title" class="form-title">Garanta sua vaga</h2>
+          <p class="form-desc">Deixe seus dados para falar com a equipe da X25 e confirmar sua inscrição.</p>
+        </div>
+
+        <div class="field">
+          <input id="f-nome" name="nome" type="text" autocomplete="name" placeholder=" " required minlength="3" aria-describedby="e-nome">
+          <label for="f-nome">Nome completo</label>
+          <p class="field-error" id="e-nome" role="alert"></p>
+        </div>
+        <div class="field">
+          <input id="f-whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel-national" placeholder=" " required aria-describedby="e-whatsapp" maxlength="16">
+          <label for="f-whatsapp">WhatsApp com DDD</label>
+          <p class="field-error" id="e-whatsapp" role="alert"></p>
+        </div>
+        <div class="field">
+          <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder=" " required aria-describedby="e-email">
+          <label for="f-email">E-mail</label>
+          <p class="field-error" id="e-email" role="alert"></p>
+        </div>
+
+        <!-- honeypot anti-spam: não preencher -->
+        <div class="hp" aria-hidden="true">
+          <label for="f-site">Não preencha este campo</label>
+          <input id="f-site" name="site" type="text" tabindex="-1" autocomplete="off">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" data-submit>
+          <span class="btn-label">Quero garantir minha vaga</span>
+          <span class="btn-spinner" aria-hidden="true"></span>
+          <svg class="ic btn-ic" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </button>
+        <p class="form-note">Seus dados são usados apenas para contato sobre a oficina.</p>
+
+        <div class="form-status" data-form-status role="status" aria-live="polite" tabindex="-1"></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="layer-ruler" aria-hidden="true"></div>
+</section>
+
+<!-- ============ 02 · CURIOSIDADE ============ -->
+<section class="curiosity theme-light" id="curiosidade" aria-labelledby="cur-title">
+  <div class="container curiosity-layout">
+    <div class="curiosity-copy" data-reveal>
+      <p class="kicker"><span class="mono">01</span> A tecnologia</p>
+      <h2 id="cur-title" class="h2">Você já imaginou transformar uma ideia em um <span class="hl-dark">objeto de verdade?</span></h2>
+      <p class="lead">A impressora 3D constrói peças sobrepondo finíssimas camadas de material, uma sobre a outra. Um chaveiro com o seu nome, um presente único, uma peça de decoração, um organizador para a mesa, o protótipo de um produto: aquilo que hoje é só ideia pode ganhar forma e ir parar na sua mão.</p>
+
+      <ol class="process" aria-label="Como uma ideia vira objeto">
+        <li><span class="p-ic"><svg class="ic" aria-hidden="true"><use href="#i-idea"/></svg></span><span class="p-n mono">01</span><strong>Ideia</strong><small>o que você quer criar</small></li>
+        <li><span class="p-ic"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg></span><span class="p-n mono">02</span><strong>Arquivo 3D</strong><small>STL ou 3MF</small></li>
+        <li><span class="p-ic"><svg class="ic" aria-hidden="true"><use href="#i-layers"/></svg></span><span class="p-n mono">03</span><strong>Fatiamento</strong><small>a peça vira camadas</small></li>
+        <li><span class="p-ic"><svg class="ic" aria-hidden="true"><use href="#i-cube"/></svg></span><span class="p-n mono">04</span><strong>Objeto real</strong><small>camada por camada</small></li>
+      </ol>
+    </div>
+
+    <div class="collage" data-reveal>
+      <figure class="cl-main">
+        <img src="assets/img/fotos/placa-beagle-600.webp" srcset="assets/img/fotos/placa-beagle-600.webp 600w, assets/img/fotos/placa-beagle-1200.webp 1200w" sizes="(min-width: 900px) 30vw, 70vw" width="600" height="900" alt="Placa decorativa de cachorro da raça beagle impressa em 3D em laranja, branco e preto" loading="lazy">
+        <figcaption class="tag mono">fig.01 — placa decorativa</figcaption>
+      </figure>
+      <figure class="cl-side">
+        <img src="assets/img/fotos/escultura-pensador-600.webp" width="600" height="900" alt="Escultura de figura humana sentada em pose pensativa, impressa em 3D em verde translúcido" loading="lazy">
+        <figcaption class="tag mono">fig.02 — escultura</figcaption>
+      </figure>
+      <img class="cl-cut" src="assets/img/recortes/ovo-400.webp" width="400" height="506" alt="Ovo de dragão com escamas impresso em 3D com degradê de bege a verde-água" loading="lazy">
+      <svg class="cl-dim" viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M1 7h198M1 1v12M199 1v12" stroke="currentColor" stroke-width="1.2" fill="none" vector-effect="non-scaling-stroke"/></svg>
+      <span class="cl-z mono" aria-hidden="true">Z+ 0.20 mm / camada</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 · EXPERIÊNCIA ============ -->
+<section class="experience theme-dark" id="experiencia" aria-labelledby="exp-title">
+  <div class="container">
+    <div class="exp-head" data-reveal>
+      <p class="kicker"><span class="mono">02</span> A oficina</p>
+      <h2 id="exp-title" class="h2">Muito além da teoria. <span class="hl">Uma experiência prática</span> com impressão 3D.</h2>
+      <p class="lead">A oficina segue a aprendizagem baseada em projetos: cada conceito aparece quando você precisa dele para tirar a sua peça do papel. Nada de decorar parâmetros soltos.</p>
+    </div>
+
+    <div class="exp-layout">
+      <figure class="exp-photo" data-reveal>
+        <img src="assets/img/fotos/impressora-em-acao-600.webp" srcset="assets/img/fotos/impressora-em-acao-600.webp 600w, assets/img/fotos/impressora-em-acao-1200.webp 1200w" sizes="(min-width: 960px) 40vw, 92vw" width="600" height="900" alt="Impressora 3D em funcionamento imprimindo uma peça amarela, com o rolo de filamento amarelo no topo" loading="lazy">
+        <figcaption>
+          <span class="live mono"><i aria-hidden="true"></i>imprimindo</span>
+          <strong>Mão na massa de verdade.</strong> Você prepara o arquivo, configura o projeto e opera a impressora.
+        </figcaption>
+      </figure>
+
+      <ol class="modules">
+        <li class="module" data-reveal>
+          <span class="m-n mono">01</span>
+          <div class="m-ic"><svg class="ic" aria-hidden="true"><use href="#i-cube"/></svg></div>
+          <div class="m-body">
+            <h3>O universo da impressão 3D</h3>
+            <p>O que é, para que serve e as principais possibilidades de uso. Os tipos de impressoras 3D e de filamentos, e onde cada um se aplica.</p>
+          </div>
+        </li>
+        <li class="module" data-reveal>
+          <span class="m-n mono">02</span>
+          <div class="m-ic"><svg class="ic" aria-hidden="true"><use href="#i-nozzle"/></svg></div>
+          <div class="m-body">
+            <h3>Conhecendo a máquina</h3>
+            <p>Extrusora, bico e alimentação do filamento, eixos e movimentação. Placas de impressão fria, holográfica e PEI, aderência da peça e como colocar e retirar o filamento.</p>
+          </div>
+        </li>
+        <li class="module" data-reveal>
+          <span class="m-n mono">03</span>
+          <div class="m-ic"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg></div>
+          <div class="m-body">
+            <h3>Do arquivo à peça</h3>
+            <p>Como escolher, encontrar e avaliar projetos. A diferença entre STL e 3MF, a preparação do arquivo, as noções de fatiamento e as configurações essenciais.</p>
+          </div>
+        </li>
+        <li class="module" data-reveal>
+          <span class="m-n mono">04</span>
+          <div class="m-ic"><svg class="ic" aria-hidden="true"><use href="#i-hand"/></svg></div>
+          <div class="m-body">
+            <h3>Imprimir, acompanhar, retirar</h3>
+            <p>Início, acompanhamento e retirada da peça impressa. Como identificar problemas básicos e as boas práticas de operação e conservação da impressora.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="project-band" data-reveal>
+      <div class="pb-copy">
+        <p class="kicker"><svg class="ic" aria-hidden="true"><use href="#i-key"/></svg> Projeto da oficina</p>
+        <h3 class="h3">Você cria e imprime o seu <span class="hl">chaveiro personalizado.</span></h3>
+        <p>Nome, palavra, símbolo ou um elemento gráfico simples: quem define é você. É nele que você aplica tudo o que aprendeu, da escolha do projeto até a retirada da peça da mesa.</p>
+        <a href="#inscricao" class="btn btn-primary" data-go-form>Quero criar o meu <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="pb-visual" aria-hidden="true">
+        <div class="kc">
+          <span class="kc-ring"></span>
+          <span class="kc-body"><span class="kc-text" data-kc-text>SEU NOME</span></span>
+        </div>
+        <span class="pb-label mono">preview do fatiador · 0.20 mm</span>
+      </div>
+    </div>
+
+    <p class="printer-note"><svg class="ic" aria-hidden="true"><use href="#i-printer"/></svg><span><strong>Como funciona o uso das impressoras:</strong> as máquinas são compartilhadas entre as participantes, e todas preparam arquivos, configuram projetos e utilizam a impressora. Peças com impressão mais longa podem seguir imprimindo e ser concluídas depois do encontro.</span></p>
+  </div>
+</section>
+
+<!-- ============ 04 · PARA QUEM ============ -->
+<section class="audience theme-gray" id="para-quem" aria-labelledby="aud-title">
+  <div class="container audience-layout">
+    <div class="aud-head" data-reveal>
+      <p class="kicker"><span class="mono">03</span> Para quem é</p>
+      <h2 id="aud-title" class="h2">Nunca usou uma impressora 3D? <span class="hl-dark">Perfeito.</span></h2>
+      <p class="lead">A oficina foi pensada para iniciantes. Você parte do zero, entende como tudo funciona e sai tendo operado a máquina com as próprias mãos.</p>
+      <div class="stamp" aria-hidden="true"><span>sem</span><b>experiência</b><span>prévia</span></div>
+    </div>
+
+    <ul class="profiles">
+      <li class="profile" data-reveal>
+        <svg class="ic" aria-hidden="true"><use href="#i-chip"/></svg>
+        <div><h3>Curiosos por tecnologia</h3><p>Querem entender, na prática, como uma impressora 3D transforma um arquivo em objeto.</p></div>
+      </li>
+      <li class="profile" data-reveal>
+        <svg class="ic" aria-hidden="true"><use href="#i-gift"/></svg>
+        <div><h3>Mentes criativas</h3><p>Imaginam presentes, peças de decoração e acessórios personalizados, com a sua cara.</p></div>
+      </li>
+      <li class="profile" data-reveal>
+        <svg class="ic" aria-hidden="true"><use href="#i-grid"/></svg>
+        <div><h3>Quem gosta de resolver</h3><p>Pensam em objetos utilitários e de organização para o dia a dia, do jeito que precisam.</p></div>
+      </li>
+      <li class="profile" data-reveal>
+        <svg class="ic" aria-hidden="true"><use href="#i-proto"/></svg>
+        <div><h3>Quem tem ideias de produto</h3><p>Querem tirar protótipos e novos produtos do papel e ver como eles ficam de verdade.</p></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 05 · GALERIA ============ -->
+<section class="gallery theme-dark" id="galeria" aria-labelledby="gal-title">
+  <div class="container">
+    <div class="gal-head" data-reveal>
+      <div>
+        <p class="kicker"><span class="mono">04</span> Galeria de criações</p>
+        <h2 id="gal-title" class="h2">Tudo isso começou <span class="hl">como um arquivo.</span></h2>
+      </div>
+      <p class="lead">Peças reais impressas em 3D. Da miniatura cheia de detalhes à peça multicolorida: veja até onde essa tecnologia pode levar as suas ideias.</p>
+    </div>
+
+    <div class="gal-grid" data-gallery>
+      <button class="g-item g-tall" data-full="assets/img/fotos/mascote-1200.webp" data-caption="Mascote multicolorido com base personalizada">
+        <img src="assets/img/fotos/mascote-600.webp" width="600" height="900" alt="Mascote de galo com uniforme listrado e chuteiras douradas, impresso em 3D em várias cores" loading="lazy">
+        <span class="g-cap"><span class="mono">01</span>Mascote multicolorido</span>
+      </button>
+      <button class="g-item g-wide" data-full="assets/img/fotos/placa-beagle-1200.webp" data-caption="Placa decorativa de beagle">
+        <img src="assets/img/fotos/placa-beagle-600.webp" width="600" height="900" alt="Placa decorativa de beagle impressa em 3D" loading="lazy">
+        <span class="g-cap"><span class="mono">02</span>Placa decorativa</span>
+      </button>
+      <button class="g-item" data-full="assets/img/fotos/ovo-dragao-1200.webp" data-caption="Ovo de dragão com escamas em degradê">
+        <img src="assets/img/fotos/ovo-dragao-600.webp" width="600" height="900" alt="Ovo de dragão impresso em 3D com escamas em degradê de bege a verde-água" loading="lazy">
+        <span class="g-cap"><span class="mono">03</span>Ovo de dragão</span>
+      </button>
+      <button class="g-item g-tall" data-full="assets/img/fotos/passaro-equilibrista-1200.webp" data-caption="Pássaro equilibrista em filamento de efeito metálico">
+        <img src="assets/img/fotos/passaro-equilibrista-600.webp" width="600" height="900" alt="Pássaro equilibrista apoiado pelo bico em uma haste, impresso em 3D em tons de rosa e vinho" loading="lazy">
+        <span class="g-cap"><span class="mono">04</span>Pássaro equilibrista</span>
+      </button>
+      <button class="g-item" data-full="assets/img/fotos/imagem-sacra-1200.webp" data-caption="Imagem sacra em miniatura, em dourado">
+        <img src="assets/img/fotos/imagem-sacra-600.webp" width="600" height="900" alt="Imagem sacra em miniatura impressa em 3D na cor dourada" loading="lazy">
+        <span class="g-cap"><span class="mono">05</span>Miniatura detalhada</span>
+      </button>
+      <button class="g-item g-tall" data-full="assets/img/fotos/escultura-pensador-1200.webp" data-caption="Escultura em filamento verde translúcido">
+        <img src="assets/img/fotos/escultura-pensador-600.webp" width="600" height="900" alt="Escultura de figura sentada em pose pensativa, em verde translúcido" loading="lazy">
+        <span class="g-cap"><span class="mono">06</span>Escultura</span>
+      </button>
+      <button class="g-item g-wide" data-full="assets/img/fotos/nome-3d-1200.webp" data-caption="Nome em 3D com base">
+        <img src="assets/img/fotos/nome-3d-600.webp" width="600" height="900" alt="Letras do nome Caio impressas em 3D em pé sobre uma base" loading="lazy">
+        <span class="g-cap"><span class="mono">07</span>Nome em 3D</span>
+      </button>
+      <button class="g-item" data-full="assets/img/fotos/topo-bolo-1200.webp" data-caption="Topo de bolo personalizado">
+        <img src="assets/img/fotos/topo-bolo-600.webp" width="600" height="900" alt="Topo de bolo de aniversário personalizado impresso em 3D em azul, branco e vermelho" loading="lazy">
+        <span class="g-cap"><span class="mono">08</span>Topo de bolo</span>
+      </button>
+      <button class="g-item g-tall" data-full="assets/img/fotos/presepio-esfera-1200.webp" data-caption="Presépio em esfera vazada">
+        <img src="assets/img/fotos/presepio-esfera-600.webp" width="600" height="900" alt="Esfera decorativa vazada com cena de presépio no interior, impressa em 3D em branco" loading="lazy">
+        <span class="g-cap"><span class="mono">09</span>Presépio em esfera</span>
+      </button>
+      <button class="g-item" data-full="assets/img/fotos/arvore-natal-1200.webp" data-caption="Árvore de Natal com recorte vazado">
+        <img src="assets/img/fotos/arvore-natal-600.webp" width="600" height="900" alt="Árvore de Natal com cena vazada de trenó e casas, impressa em 3D em tom vinho" loading="lazy">
+        <span class="g-cap"><span class="mono">10</span>Árvore vazada</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 · LOCALIZAÇÃO ============ -->
+<section class="location theme-light" id="local" aria-labelledby="loc-title">
+  <div class="container loc-layout">
+    <div class="loc-info" data-reveal>
+      <p class="kicker"><span class="mono">05</span> Onde acontece</p>
+      <h2 id="loc-title" class="h2">No coração da <span class="hl-dark">Asa Sul.</span></h2>
+
+      <address class="loc-card">
+        <span class="loc-pin"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg></span>
+        <span class="loc-lines">
+          <strong>Mix Park Sul</strong>
+          <span>910 Sul — Asa Sul</span>
+          <span>Brasília — DF</span>
+        </span>
+      </address>
+
+      <div class="loc-actions">
+        <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Mix+Park+Sul+910+Sul+Asa+Sul+Bras%C3%ADlia+DF" target="_blank" rel="noopener">
+          <svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> Como chegar
+        </a>
+        <a class="btn btn-ghost-dark" href="https://wa.me/556132442510" target="_blank" rel="noopener" data-wa-link>
+          <svg class="ic" aria-hidden="true"><use href="#i-whatsapp"/></svg> (61) 3244-2510
+        </a>
+      </div>
+      <p class="loc-hint">Tem alguma dúvida? Chame a equipe da X25 no WhatsApp.</p>
+    </div>
+
+    <div class="loc-map" data-reveal>
+      <iframe title="Mapa: Mix Park Sul, 910 Sul, Asa Sul, Brasília — DF" src="https://maps.google.com/maps?q=Mix%20Park%20Sul%20910%20Sul%20Bras%C3%ADlia%20DF&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <span class="corner tl" aria-hidden="true"></span><span class="corner br" aria-hidden="true"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 · CTA FINAL ============ -->
+<section class="final-cta theme-dark" id="cta" aria-labelledby="cta-title">
+  <div class="fc-bg" aria-hidden="true"></div>
+  <img class="fc-cut fc-cut-l" src="assets/img/recortes/beagle-400.webp" width="400" height="305" alt="" loading="lazy" aria-hidden="true">
+  <img class="fc-cut fc-cut-r" src="assets/img/recortes/pensador-400.webp" width="400" height="546" alt="" loading="lazy" aria-hidden="true">
+  <div class="container fc-inner" data-reveal>
+    <p class="kicker"><span class="mono">06</span> O primeiro passo</p>
+    <h2 id="cta-title" class="fc-title">Sua próxima grande ideia <span class="hl">pode começar aqui.</span></h2>
+    <p class="lead">Venha conhecer a impressora 3D de perto, aprender o caminho completo do arquivo até a peça e criar uma peça que é só sua.</p>
+    <a href="#inscricao" class="btn btn-primary btn-lg" data-go-form>Quero me inscrever <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer theme-dark">
+  <div class="container footer-inner">
+    <img src="assets/brand/logo-x25-branco.webp" alt="X25 Cursos" width="110" height="40" loading="lazy">
+    <p class="f-addr">Mix Park Sul · 910 Sul — Asa Sul · Brasília — DF</p>
+    <a class="f-wa" href="https://wa.me/556132442510" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-whatsapp"/></svg> (61) 3244-2510</a>
+    <p class="f-copy">© <span data-year>2026</span> X25 Cursos</p>
+  </div>
+</footer>
+
+<!-- WhatsApp flutuante -->
+<a class="wa-float" href="https://wa.me/556132442510?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Oficina%20de%20Impress%C3%A3o%203D%20para%20Iniciantes." target="_blank" rel="noopener" aria-label="Conversar com a X25 Cursos no WhatsApp">
+  <svg class="ic" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+  <span class="wa-tip">Dúvidas? Fale com a gente</span>
+</a>
+
+<!-- Barra fixa mobile -->
+<div class="mobile-bar" data-mobile-bar>
+  <a href="#inscricao" class="btn btn-primary btn-block" data-go-form>Quero garantir minha vaga</a>
+</div>
+
+<!-- Lightbox da galeria -->
+<div class="lightbox" data-lightbox hidden role="dialog" aria-modal="true" aria-label="Visualização da imagem">
+  <button class="lb-btn lb-close" data-lb-close aria-label="Fechar"><svg class="ic" aria-hidden="true"><use href="#i-close"/></svg></button>
+  <button class="lb-btn lb-prev" data-lb-prev aria-label="Imagem anterior"><svg class="ic" aria-hidden="true"><use href="#i-chev-l"/></svg></button>
+  <figure class="lb-figure">
+    <img data-lb-img alt="">
+    <figcaption data-lb-cap></figcaption>
+  </figure>
+  <button class="lb-btn lb-next" data-lb-next aria-label="Próxima imagem"><svg class="ic" aria-hidden="true"><use href="#i-chev-r"/></svg></button>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

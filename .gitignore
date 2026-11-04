@@ -1,0 +1,9 @@
+# Originais em alta resolução (o site usa as versões otimizadas em assets/)
+fotos-produto/
+foto-impressora/
+logo/
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
