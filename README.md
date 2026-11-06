@@ -92,7 +92,7 @@ Se o Google Tag Manager ou o Pixel da Meta forem instalados na página, o formul
 - `dataLayer.push({ event: "lead_whatsapp" })` quando a inscrição é direcionada ao WhatsApp.
 
 ## Antes de publicar
-- [ ] Em `index.html`, troque `<link rel="canonical" href="./">` e as URLs `og:image` pelo **endereço absoluto** do domínio final (ex.: `https://x25cursos.com.br/oficina-3d/assets/img/og-image.jpg`). Redes sociais exigem URL absoluta para exibir a imagem.
+- [x] Domínio: o site é publicado em https://x25.com.br/ (GitHub Pages + arquivo `CNAME`, DNS na DigitalOcean). Se o domínio mudar, atualize `CNAME` e as URLs `canonical`, `og:url` e `og:image` em `index.html`.
 - [ ] Configure o `formEndpoint` (ou mantenha o modo WhatsApp de forma consciente).
 - [ ] Confirme se a X25 tem autorização para divulgar as peças com marcas de terceiros (veja a observação abaixo).
 
